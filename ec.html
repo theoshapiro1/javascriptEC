@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "utf-8">
+<title>Homework 2</title>
+
+</head>
+<body>
+    
+<form>
+    <input type = 'text' value = '' id = 'text1'>
+    <input type = 'button' id = 'btn' value = "jump>" onclick="jump()">
+    <input type = 'text' value = '' id = 'text2'>
+</form>
+<script>
+    function jump() {
+        if (document.getElementById('btn').value == "jump>") {
+            document.getElementById('btn').value = "<jump";
+        } else {
+            document.getElementById('btn').value = 'jump>';
+        }
+        let a = document.getElementById('text1').value
+        let b = document.getElementById('text2').value
+        document.getElementById('text2').value = a;
+        document.getElementById('text1').value = b;
+    }
+</script>
+
+<br /><br />
+
+<input type = "checkbox" id = "checkAll" onclick = "checkAll()">
+<label for ="checkAll" id = "labelID">check all</label>
+<br /><br />
+<input type = "checkbox" id = "cb1">first<br />
+<input type = "checkbox" id = "cb2">second<br />
+<input type = "checkbox" id = "cb3">third<br />
+<input type = "checkbox" id = "cb4">fourth<br />
+
+<script>
+    function checkAll() {
+        if (document.getElementById("labelID").innerHTML = "check all") {
+            document.getElementById("cb1").checked = "checked";
+            document.getElementById("cb2").checked = "checked";
+            document.getElementById("cb3").checked = "checked";
+            document.getElementById("cb4").checked = "checked";
+            document.getElementById("labelID").innerHTML = "uncheck all";
+        } else {
+            document.getElementById("cb1").attr("checked", "");
+            $("#cb2").removeAttr("checked");
+            document.getElementById("cb3").unchecked = true;
+            document.getElementById("cb4").checked = "unchecked";
+            document.getElementById("labelID").innerHTML = "check all";
+        }
+        
+        
+    }
+</script>
+
+</body>
+</html>
